@@ -1,9 +1,9 @@
 //console.log(angular);
 angular.module('studentApp', []).controller('StudentController', ['$scope', function($scope) {
 	$scope.students = JSON.parse(localStorage.getItem('students')) || [{
-first_name: "calvin",
-last_name: 'Tennant',
-Twitter_Username: 'c11t_',
+first_name: "",
+last_name: '',
+Twitter_Username: '',
 number: 1,
 	}];
 	//localStorage.setItem('students', 'testing');

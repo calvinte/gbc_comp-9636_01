@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+	<title>Calories for the day</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+	<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-app="calorieApp">
+			<h1>Calories for the day</h1>
+
+			<br /><br /><br />
+
+			<form method="get" action="http://www.google.com/search" target="_blank"> <input type="text" name="q" size="31" maxlength="255" value="" /> <input type="submit" value="Search for food calories"  >
+
+			</form>
+
+			<br /> <br /><br />
+
+
+			<div ng-controller="CaloriesController">
+				<form ng-submit="addCalorie()">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Food</th>
+								<th>Portion</th>
+								<th>Calories</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="calorie in calories track by $id(calorie.number)">
+								<td>
+									{{calorie.number}}
+								</td>
+								<td class="wide">
+									{{calorie.food}}
+								</td>
+								<td class="wide">
+									{{calorie.portion}}
+								</td>
+								<td class="wide">
+									{{calorie.calorienum}}
+								</td>
+								<td><a href="#" class="btn btn-danger" ng-click="removeCalorie(calorie)">&times;</a></td>
+							</tr>
+						</tbody>
+						</tfoot>
+							<tr>	
+								<td></td>
+
+								<td></td>
+								<td>total</td>
+
+								<td>
+									{{total}}
+								</td>
+								<td></td>					
+							</tr>
+							<tr>
+								<td>
+									<input type="submit" value="add" class="btn btn-primary">
+								</td>
+								<td class="wide">
+									<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input ng-model="food" type="text" class="form-control" placeholder="food">
+								</td>
+								<td class="wide">
+									<input  ng-model="portion"  type="text" class="form-control" placeholder="portion">
+								</td>
+								<td class="wide">
+									
+									<input  ng-model="calorienum" type="number" class="form-control" placeholder="calories">
+
+									</div>
+								</td>
+																
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+			</div>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Nosifer);
+@import url(http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
+
+body h1{
+color: Red;
+}
+
+td.wide
+{
+width: 25%;
+color: blue;
+font-family: 'Stint Ultra Expanded', cursive;
+}
+
+th
+{
+background-color: beige;
+font-family: 'Georgia', cursive;
+}

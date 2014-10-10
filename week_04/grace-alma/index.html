@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+			<title>Grocery List</title>
+			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+			<script src="script.js"></script>
+	</head>
+	<body>
+		<div class ="container" ng-app="productApp">
+		<h1>Grocery List</h1>
+			<div ng-controller="ProductsController">
+				<form ng-submit="addProduct()">
+					<table class = "table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Quantity</th>
+								<th>Item</th>
+								<th>Cost ($)</th>
+								<th>Store</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="product in products track by $id(product.number)">
+								<td>
+									{{product.number}}
+								</td>
+								<td class = "wide">
+									{{product.quantity}}
+								</td>
+								<td class = "wide">
+									{{product.item}}
+								</td>
+								<td class = "wide">
+									{{product.cost}}
+								</td>
+								<td class = "wide">
+									{{product.store}}
+								</td>
+								<td><a href="#" class="btn btn-danger" ng-click="removeProduct(product)">&times;</a></td>
+							</tr>
+						</tbody>
+						</tfoot>
+							<tr>
+								<td>
+									<input type = "submit" value ="add" class = "btn btn-primary">
+								</td>
+												
+								<td class = "wide">
+									<input ng-model="quantity" type = "text" class = "form-control" placeholder="Quantity">
+					
+								</td>									
+								<td class = "wide">
+								<input ng-model="item" type = "text" class = "form-control" placeholder="Item">
+					
+								</td>
+								<td class = "wide">
+									<div class ="input-group">
+										<span class="input-group-addon">$</span>
+										<input ng-model="cost" type = "number" class = "form-control" placeholder="Cost">
+									</div>
+								</td>
+								<td class = "wide">
+								<input ng-model="store" type = "text" class = "form-control" placeholder="Store">
+					
+								</td>
+								<td></td>
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>	
+</html>	

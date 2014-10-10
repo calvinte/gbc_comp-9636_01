@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+			<title>Video Games</title>
+			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+			<script src="script.js"></script>
+	</head>
+	<body>
+		<div class ="container" ng-app="VideoGamesApp">
+		<h1>Video Games</h1>
+			<div ng-controller="VideoGamesController">
+				<form ng-submit="addVideoGames()">
+					<table class = "table VideoGames">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Title</th>
+								<th>Studio</th>
+								<th>Rate this Title</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="VideoGame in VideoGames track by $id(VideoGame.number)">
+								<td>
+									{{VideoGame.number}}
+								</td>
+								<td class = "wide">
+									{{VideoGame.title}}
+								</td>
+								<td class = "wide">
+									{{VideoGame.studio}}
+								</td>
+								<td class = "wide">
+									{{VideoGame.rating}}
+								</td>
+								<td><a href="#" class = "btn btn-danger" ng-click="removeVideoGames(VideoGame)">&times;</a></td>
+							</tr>
+						</tbody>
+						</tfoot>
+							<tr>
+								<td>
+									<input type = "submit" value ="add" class = "btn btn-primary">
+								</td>				
+								<td class = "wide">
+									<input ng-model="title" type = "text" class = "form-control" placeholder="Title">
+					
+								</td>									
+								<td class = "wide">
+								<input ng-model="studio" type = "text" class = "form-control" placeholder="Studio">
+					
+								</td>
+								<td class = "wide">
+									<input type="radio" value="1" name="rating" ng-model="rating">
+									<input type="radio" value="2" name="rating" ng-model="rating">
+									<input type="radio" value="3" name="rating" ng-model="rating">
+									<input type="radio" value="4" name="rating" ng-model="rating">
+									<input type="radio" value="5" name="rating" ng-model="rating">
+								</div>
+								</td>
+								<td></td>
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+			</div>
+		</div>
+
+	</body>	
+</html>

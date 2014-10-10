@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Guest List</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">	
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>	
+		<div class="container" ng-app="guestApp">
+			<h1>Guest List</h1>	
+			<div ng-controller="GuestsController">
+				<form ng-submit="addGuest()">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Last name</th>
+								<th>First Name</th>
+								<th>Twitter Username</th>
+								<th>Dish Requested</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="guest in guests track by $id(guest.number)">
+								<td>
+									{{guest.number}}
+								</td>
+								<td class="wide">
+									{{guest.last_name}}
+								</td>
+								<td class="wide">
+									{{guest.first_name}}
+								</td>
+								<td class="wide">
+									{{guest.twitter_username}}
+								</td>
+								<td class="wide">
+									{{guest.dish_requested}}
+								</td>
+								<td><a href="#" class="btn btn-danger" ng-click="removeGuest(guest)">&times;</a></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>
+									<input type="submit" value="add" class="btn btn-primary">
+								</td>
+								<td class="wide">
+									<input ng-model="first_name" type="text" class="form-control" placeholder="Last Name">
+								</td>
+								<td class="wide">
+									<input ng-model="last_name" type="text" class="form-control" placeholder="First Name">
+								</td>
+								<td class="wide">
+									<div class="input-group">
+										<span class="input-group-addon">@</span>
+										<input ng-model="twitter_username" type="text" class="form-control" placeholder="Twitter Username">
+									</div>
+								</td>
+								<td class="wide">
+
+        							<select ng-model="dish_requested" class="form-control" placeholder="Choose One">
+						            	<option value="chicken">Chicken</option>
+						                <option value="steak">Steak</option>
+						                <option value="salmon">Salmon</option>
+						                <option value="pasta">Pasta</option>
+						                <option value="vegetarian">Vegetarian</option>
+								    </select>
+								
+
+								</td>
+
+								<td></td>
+							</tr>
+						</tfoot>				
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+

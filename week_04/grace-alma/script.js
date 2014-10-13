@@ -4,10 +4,13 @@ angular.module('productApp', []).controller('ProductsController', ['$scope', fun
 	
 
 		$scope.products = JSON.parse(localStorage.getItem('products')) || [{
-			quantity: '2 pcs',	
+			store: 'Walmart',
+			quantity: 2,	
 			item: 'Mango',	
-			cost: 1.00,	
-			store: 'Metro',
+			unitcost: 1.00,	
+			totalprice: 2.00,
+
+
 			number: 1,
 
 		}];
@@ -18,15 +21,18 @@ angular.module('productApp', []).controller('ProductsController', ['$scope', fun
 	
 		$scope.products.push({
 			number: $scope.products.length +1,
+			store: $scope.store,
 			quantity: $scope.quantity, 
 			item: $scope.item, 
-			cost: $scope.cost,
-			store: $scope.store,
+			unitcost: $scope.unitcost,
+			totalprice: $scope.quantity * $scope.unitcost,
+
 		});
-		$scope.quantity=''; 
-		$scope.item='';
-		$scope.cost=0;
 		$scope.store='';
+		$scope.quantity=0; 
+		$scope.item='';
+		$scope.unitcost=0;
+		$scope.totalprice=0;
 
 		localStorage.setItem('products', JSON.stringify($scope.products));
 

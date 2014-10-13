@@ -8,6 +8,23 @@
 			<script src="script.js"></script>
 	</head>
 	<body>
+		<div class = "gsearch">
+			<form method="get" action="http://www.google.com/search">
+
+			<div style="border:2px solid gray;padding:2px;width:20em;">
+			<table border="0" align="center" cellpadding="0">
+			<tr><td>
+			<input type="text"   name="q" size="30" style="color:#808080;"
+			maxlength="255" value="Google site search"
+			onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+			<input type="submit" value="Go!" />
+
+			</table>
+			</div>
+
+			</form>	
+		</div>
+	
 		<div class ="container" ng-app="productApp">
 		<h1>Grocery List</h1>
 			<div ng-controller="ProductsController">
@@ -16,10 +33,11 @@
 						<thead>
 							<tr>
 								<th>#</th>
+								<th>Store</th>
 								<th>Quantity</th>
 								<th>Item</th>
-								<th>Cost ($)</th>
-								<th>Store</th>
+								<th>Unit Cost ($)</th>
+								<th>Total Price ($)</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -29,17 +47,22 @@
 									{{product.number}}
 								</td>
 								<td class = "wide">
+									{{product.store}}
+								</td>
+								<td class = "wide">
 									{{product.quantity}}
 								</td>
 								<td class = "wide">
 									{{product.item}}
 								</td>
 								<td class = "wide">
-									{{product.cost}}
+									{{product.unitcost}}
 								</td>
 								<td class = "wide">
-									{{product.store}}
+									{{product.quantity * product.unitcost | number:2}}
+					
 								</td>
+
 								<td><a href="#" class="btn btn-danger" ng-click="removeProduct(product)">&times;</a></td>
 							</tr>
 						</tbody>
@@ -48,9 +71,20 @@
 								<td>
 									<input type = "submit" value ="add" class = "btn btn-primary">
 								</td>
-												
+								<td class="wide">
+
+								<select ng-model="store" class="form-control">
+								<option value="No Frills">No Frills</option>
+								<option value="Metro">Metro</option>
+								<option value="Fresco">Fresco</option>
+								<option value="Walmart">Walmart</option>
+								<option value="Loblaws">Loblaws</option>
+								</select>
+
+								</td>
+							
 								<td class = "wide">
-									<input ng-model="quantity" type = "text" class = "form-control" placeholder="Quantity">
+									<input ng-model="quantity" type = "number" step=1 min=1 class = "form-control" placeholder="Quantity">
 					
 								</td>									
 								<td class = "wide">
@@ -60,13 +94,11 @@
 								<td class = "wide">
 									<div class ="input-group">
 										<span class="input-group-addon">$</span>
-										<input ng-model="cost" type = "number" class = "form-control" placeholder="Cost">
+										<input ng-model="unitcost" type = "number" step =.01 min=.00 class = "form-control" placeholder="UnitCost">
 									</div>
 								</td>
-								<td class = "wide">
-								<input ng-model="store" type = "text" class = "form-control" placeholder="Store">
-					
-								</td>
+
+
 								<td></td>
 							</tr>
 						</tfoot>

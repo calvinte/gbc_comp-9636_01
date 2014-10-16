@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Maria Chau Menu Orders</title>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">	
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>	
+		<div class="container" ng-app="menuOrderApp">
+			<h1>Menu Order</h1>	
+			<div ng-controller="menuOrdersController">
+				<form ng-submit="addMenuOrder()">
+					<table class="table">
+						<thead>
+							<tr class="theading">
+								<th>#</th>
+								<th>GUEST NAME</th>
+								<th>APPETIZER</th>
+								<th>MAIN COURSE</th>
+								<th>DRINK</th>
+								<th>DESSERT</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="menuorder in menuorders track by $id(menuorder.number)">
+								<td>
+									{{menuorder.number}}
+								</td>
+								<td class="wide">
+									{{menuorder.guest_name}}
+								</td>
+								<td class="wide">
+									{{menuorder.appetizer}}
+								</td>
+								<td class="wide">
+									{{menuorder.main_course}}
+								</td>
+								<td class="wide">
+									{{menuorder.drink}}
+								</td>
+								<td class="wide">
+									{{menuorder.dessert}}
+								</td>
+								<td><a href="#" class="btn btn-danger" ng-click="removeMenuOrder(menuorder)">&times;</a></td> 
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>
+									<input type="submit" value="add" class="btn btn-primary">
+								</td>
+								<td class="wide">
+									<input ng-model="guest_name" type="text" class="form-control" placeholder="Guest Name">
+								</td>
+								<td class="wide">
+									<select ng-model="appetizer" class="form-control" placeholder="Appetizer">
+						            	<option value="Garlic Bread">Garlic Bread</option>
+						                <option value="Salad">Salad</option>
+						                <option value="Scallop">Scallops</option>
+						                <option value="Calamari">Calamari</option>
+						                <option value="Slider">Slicers</option>
+								    </select>
+								</td>
+								<td class="wide">
+									<select ng-model="main_course" class="form-control" placeholder="Main Course">
+						            	<option value="Chicken">Chicken</option>
+						                <option value="Steak">Steak</option>
+						                <option value="Salmon">Salmon</option>
+						                <option value="Pasta">Pasta</option>
+						                <option value="Vegetarian">Vegetarian</option>
+								    </select>
+								</td>
+								<td class="wide">
+        							<select ng-model="drink" class="form-control" placeholder="Drink">
+						            	<option value="Beer">Beer</option>
+						                <option value="Wine">Wine</option>
+						                <option value="Martini">Martini</option>
+						                <option value="Sparkling Water">Sparkling Water</option>
+						                <option value="Vegetarian">Cosmopolitan</option>
+								    </select>
+								</td>
+								<td class="wide">
+									<select ng-model="dessert" class="form-control" placeholder="Dessert">
+										<option value="Cheesecake">Cheesecake</option>
+						                <option value="Apple Pie">Apple Pie</option>
+						                <option value="Ice Cream">Ice Cream</option>
+						                <option value="Tartufo">Tartufo</option>
+						                <option value="Chocolate Cake">Chocolate Cake</option>
+									</select>
+								</td>
+
+								<td></td>
+							</tr>
+						</tfoot>				
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+

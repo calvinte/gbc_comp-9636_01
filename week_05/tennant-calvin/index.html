@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-app="instagramApp">
+			<h1 class="page-header">Instagram Photos</h1>
+			<div ng-controller="InstaController">
+				<ul class="container">
+					<li ng-repeat="photo in photos" class="photo col-md-2">
+						<img src="{{photo.images.standard_resolution.url}}">
+						<p>{{photo.caption.text}}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,78 @@
+	<!DOCTYPE html>
+
+	<html>
+
+	<head>
+			<title> Wedding Invitee List </title>
+			<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+			<link rel="stylesheet" href="stylesheet.css">
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+			<script src="script.js"></script>
+	</head>
+
+	<body>
+	
+		<div class="container" ng-app="studentApp">
+		<h1 align='center'>  Wedding Invitee List </h1>
+		<div ng-controller="StudentController">
+			<form ng-submit="addStudent()">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Family Name</th>
+							<th>No. of People Attending</th>
+							<th>Reception Dish Request</th>
+							<th></th>
+						</tr>
+					</thead>
+						<tbody>
+								<tr ng-repeat="student in students track by $id(student.number)">
+									<td>
+										{{student.number}}
+									</td>
+									<td class="wide">
+										{{student.first_name}}
+									</td>
+									<td class="wide">
+										{{student.last_name}}
+									</td>
+									<td class="wide">
+										{{student.Twitter_Username}}
+									</td>
+									<td><a href="#" class="btn btn-danger" ng-click="removeStudent(student)">&times;</a></td>									
+								</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td><input type="submit" value="add" class="btn btn-primary">
+								</td>
+								<td class="wide">
+									<input ng-model="first_name" type="text" class="form-control" placeholder="Family Name">
+								</td>
+								<td class="wide">
+									<input ng-model="last_name" type="text" class="form-control" placeholder="# of Attendies">
+								</td>
+								<td class="wide">
+									<div class="input-group">
+									<span class="input-group-addon"></span>
+									<input ng-model="Twitter_Username" type="text" class="form-control" placeholder="Chicken, Beef, or Fish">
+									</div>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+				
+				
+        
+      </form>
+				
+			</div>
+		</div>
+	
+			
+
+	</body>
+
+	</html>

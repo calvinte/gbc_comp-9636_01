@@ -1,0 +1,13 @@
+td.wide{
+width: 33%;
+}
+
+body{
+background:url('invitation.jpg');
+background-size: 98% auto;
+font-size: 25px;
+}
+
+h1{
+text-decoration: underline;
+}

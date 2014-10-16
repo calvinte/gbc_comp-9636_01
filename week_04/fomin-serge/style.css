@@ -1,0 +1,7 @@
+td.wide {width: 33%;}
+.container {
+	background-color: #220000;
+}
+th, td, .header {
+	color: #FFF;
+}

@@ -1,0 +1,73 @@
+*<!DOCTYPE html>
+<html>
+	<head>
+	<title>Top 5 operas</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	
+	<script src="script.js"></script>
+	</head>
+	
+	<body>
+	<div class="container" ng-app="studentApp">	
+	<h1 class='header'>World's most performed operas (season 2014/2015)</h1>
+		
+	<div ng-controller="StudentsController">
+	<form ng-submit="addStudent()">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Composer</th>
+				<th>Opera</th>
+				<th>Number of performances</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="student in students track by $id(student.number)">
+				<td>
+					{{student.number}}
+				</td>
+				<td class="wide">
+					{{student.first_name}}
+				</td>
+				<td class="wide">
+					{{student.last_name}}
+				</td>
+				<td class="wide">
+					{{student.response}}
+				</td>
+				<td><a href="#" class="btn btn-danger" ng-click="removeStudent(student)">&times;</a></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>
+					<input type="submit" value="add" class="btn btn-primary">
+				</td>
+				<td >
+					<input ng-model="first_name" type="text" class="form-control" placeholder="Composer">
+				</td>
+				<td >
+					<input ng-model="last_name" type="text" class="form-control" placeholder="Opera">
+				</td>
+				<td class="wide">
+					<input ng-model="response" type="text" class="form-control" placeholder="Number of performances">
+				</td>
+				<td></td>
+			</tr>
+		</tfoot>
+	</table>
+	</form>
+	</div>
+	</div>	
+	
+		<div id="chart">
+		</div>
+	</body>
+</html>

@@ -1,46 +1,51 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Guest List</title>
+		<title>Maria Chau Menu Orders</title>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css">	
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
 		<script src="script.js"></script>
 	</head>
 	<body>	
-		<div class="container" ng-app="guestApp">
-			<h1>Guest List</h1>	
-			<div ng-controller="GuestsController">
-				<form ng-submit="addGuest()">
+		<div class="container" ng-app="menuOrderApp">
+			<h1>Menu Order</h1>	
+			<div ng-controller="menuOrdersController">
+				<form ng-submit="addMenuOrder()">
 					<table class="table">
 						<thead>
-							<tr>
+							<tr class="theading">
 								<th>#</th>
-								<th>Last name</th>
-								<th>First Name</th>
-								<th>Twitter Username</th>
-								<th>Dish Requested</th>
+								<th>GUEST NAME</th>
+								<th>APPETIZER</th>
+								<th>MAIN COURSE</th>
+								<th>DRINK</th>
+								<th>DESSERT</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="guest in guests track by $id(guest.number)">
+							<tr ng-repeat="menuorder in menuorders track by $id(menuorder.number)">
 								<td>
-									{{guest.number}}
+									{{menuorder.number}}
 								</td>
 								<td class="wide">
-									{{guest.last_name}}
+									{{menuorder.guest_name}}
 								</td>
 								<td class="wide">
-									{{guest.first_name}}
+									{{menuorder.appetizer}}
 								</td>
 								<td class="wide">
-									{{guest.twitter_username}}
+									{{menuorder.main_course}}
 								</td>
 								<td class="wide">
-									{{guest.dish_requested}}
+									{{menuorder.drink}}
 								</td>
-								<td><a href="#" class="btn btn-danger" ng-click="removeGuest(guest)">&times;</a></td>
+								<td class="wide">
+									{{menuorder.dessert}}
+								</td>
+								<td><a href="#" class="btn btn-danger" ng-click="removeMenuOrder(menuorder)">&times;</a></td> 
 							</tr>
 						</tbody>
 						<tfoot>
@@ -49,28 +54,43 @@
 									<input type="submit" value="add" class="btn btn-primary">
 								</td>
 								<td class="wide">
-									<input ng-model="first_name" type="text" class="form-control" placeholder="Last Name">
+									<input ng-model="guest_name" type="text" class="form-control" placeholder="Guest Name">
 								</td>
 								<td class="wide">
-									<input ng-model="last_name" type="text" class="form-control" placeholder="First Name">
-								</td>
-								<td class="wide">
-									<div class="input-group">
-										<span class="input-group-addon">@</span>
-										<input ng-model="twitter_username" type="text" class="form-control" placeholder="Twitter Username">
-									</div>
-								</td>
-								<td class="wide">
-
-        							<select ng-model="dish_requested" class="form-control" placeholder="Choose One">
-						            	<option value="chicken">Chicken</option>
-						                <option value="steak">Steak</option>
-						                <option value="salmon">Salmon</option>
-						                <option value="pasta">Pasta</option>
-						                <option value="vegetarian">Vegetarian</option>
+									<select ng-model="appetizer" class="form-control" placeholder="Appetizer">
+						            	<option value="Garlic Bread">Garlic Bread</option>
+						                <option value="Salad">Salad</option>
+						                <option value="Scallop">Scallops</option>
+						                <option value="Calamari">Calamari</option>
+						                <option value="Slider">Slicers</option>
 								    </select>
-								
-
+								</td>
+								<td class="wide">
+									<select ng-model="main_course" class="form-control" placeholder="Main Course">
+						            	<option value="Chicken">Chicken</option>
+						                <option value="Steak">Steak</option>
+						                <option value="Salmon">Salmon</option>
+						                <option value="Pasta">Pasta</option>
+						                <option value="Vegetarian">Vegetarian</option>
+								    </select>
+								</td>
+								<td class="wide">
+        							<select ng-model="drink" class="form-control" placeholder="Drink">
+						            	<option value="Beer">Beer</option>
+						                <option value="Wine">Wine</option>
+						                <option value="Martini">Martini</option>
+						                <option value="Sparkling Water">Sparkling Water</option>
+						                <option value="Vegetarian">Cosmopolitan</option>
+								    </select>
+								</td>
+								<td class="wide">
+									<select ng-model="dessert" class="form-control" placeholder="Dessert">
+										<option value="Cheesecake">Cheesecake</option>
+						                <option value="Apple Pie">Apple Pie</option>
+						                <option value="Ice Cream">Ice Cream</option>
+						                <option value="Tartufo">Tartufo</option>
+						                <option value="Chocolate Cake">Chocolate Cake</option>
+									</select>
 								</td>
 
 								<td></td>

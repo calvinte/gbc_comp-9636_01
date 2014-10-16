@@ -1,0 +1,425 @@
+<!DOCTYPE HTML >
+<html>
+	<head>
+		<title>My Favourite Recipes</title>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Nosifer);
+@import url(http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
+
+body{
+	background-color: #D3D3D3;
+	background: url("http://www.download3dhouse.com/wp-content/uploads/2013/04/Brown-wood-grain-wallpaper-download.jpg");
+	margin: auto;
+	width: 1000px;
+	font-family:"Arial",Georgia,Serif;
+
+}
+
+p{
+	line-height: 20px;
+
+}
+
+.header{
+
+	margin: 20px 0 20px 0;
+	background-color: #ffffff;
+	height: 150px;
+	width: 965px;
+	padding: 1px ;
+	padding-left: 0px;
+	color: #000000;
+	opacity: 0.9;
+	text-shadow:0px 0px 2px #FFFFFF, 2px 2px 2px #333333;
+	box-shadow: 5px 5px 5px #330000;
+	overflow: hidden;
+}
+
+
+h1{
+	font-family: Arial, cursive;
+	font-size: 3em;
+	color: #000;
+	margin-top: 25px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+
+h3{
+	font-family: Arial, cursive;
+	font-size: 1.5em;
+	color: #000;
+}
+h2{
+	color: #000088;
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+h4{
+	color: #000000;
+	font-size: 16px;
+
+}
+
+h5{
+	font-family: Arial, cursive;
+	font-size: 16 px;
+	color: #000;
+}
+
+
+nav {
+	text-align: center;
+	font-size: 16px;
+	padding: 5px;
+	padding-bottom: 10px;
+	width: 955px;
+	//background-color: #996633;
+	background-color: #660000;
+}
+nav ul{
+	margin: 5px; 
+	list-style: none;
+
+}
+nav ul li{
+	display: inline-block;
+	text-decoration: none;
+	margin-left:0px;
+    margin-right:5px;
+    padding:15px;
+	padding-left:25px;
+	padding-right:25px;
+	box-shadow: 5px 5px 5px #cc3300;
+	text-shadow:0px 0px 2px #FFFFFF, 2px 2px 2px #333333;
+	transition:all 0.2s;
+}
+	
+
+nav ul a{
+	color: #ffffff;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-decoration: none;
+	//box-shadow: 1px 1px 5px #ff00ff;
+	transition:all 0.2s;
+	
+}
+nav ul li:hover{
+
+	
+	transform: rotate(-10deg) scale(1.2);
+	box-shadow: 1px 1px 1px #993300;
+	transition:all 0.1s;
+	
+}
+nav ul li:hover a{
+
+	color: #ff0000;
+	border-color: #ff0000;
+	background-color: #ffffff;
+	border-bottom-style: solid;
+	transition: all 0.4s;
+
+}
+
+nav ul li a:focus{
+
+	border-color:#0066ff;
+	background-color: #ffffff;
+	color: #0066ff;
+	border-bottom-style: solid;
+	transition: all 0.1s;
+
+
+}
+
+nav ul li a:active{
+
+	border-color:#0066ff;
+	background-color: #ffffff;
+	color: #0066ff;
+	border-bottom-style: solid;
+	transition: all 0.1s;
+
+
+}
+
+.col-one a:link{
+	color: #000;
+	text-decoration: underline;
+	font-size: 16px;
+
+}
+
+
+
+.col-left  img:hover{
+	position: relative;
+	top: -30px;
+	left: 80px;
+	transform: scale(1.5);
+	transition: all 1s;
+
+}
+
+
+
+.main-content{
+	padding: 0px;
+	overflow:hidden;
+	position: relative;
+	top: 5px;
+
+}
+
+.col-left{
+	padding: 10px 20px 10px 20px;
+	background-color: #ffffff;
+	width:665px;
+	float:left;
+	box-shadow: 1px 1px 5px #330000;
+}
+.col-right2 { 
+	padding: 0px 20px 20px 20px;
+	background-color: #ffffff;
+	width:200px;
+	margin-left: 20px;
+	float:left;
+	background-image: url("back16.jpg");
+    background-size: 100% 100%;
+	color: #000000;
+	opacity: 0.8;
+	box-shadow: 1px 1px 5px #330000;
+	
+}
+
+.col-right1 { 
+	position: fixed;
+	padding: 0px 20px 15px 20px;
+	background-color: #ffffff;
+	width:200px;
+	margin-left: 725px;
+	margin-top: -250px;
+	margin-bottom: 0px;
+	float:left;
+	background-image: url("white.jpg");
+    background-size: 100% 100%;
+	color: #000000;
+	opacity: 0.8;
+	box-shadow: 1px 1px 5px #330000;
+
+	
+}
+.col-right2 a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+.col-right2 a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-right p{ 
+	font-size: 14px;
+}
+
+.col-left img{
+	width:190px;
+	height: 142px;
+	margin-top; 15px;
+		margin-bottom; 15px;
+	box-shadow: 1px 1px 5px #330000;
+	border-radius: 5px 5px 5px 5px;
+	transition: all 1s;
+	
+}
+
+.col-right2 img{
+	width:255px;
+
+
+}
+.col-right1 img{
+	width:75px;
+	height: 130px;
+}
+
+
+.col-one{
+	padding: 5px 10px 5px 10px;
+	background-color: #fff;
+	width:200px;
+	float:left;
+
+	margin-top: 5px;
+
+}
+
+.col-two{
+	padding: 5px 10px 5px 10px;
+	background-color: #fff;
+	width:200px;
+	float:left;
+
+	margin-top: 5px;
+
+}
+
+.col-three{
+	padding: 5px 10px 5px 10px;
+	background-color: #fff;
+	width:200px;
+	float:left;
+
+	margin-top: 5px;
+
+}
+
+.col-one a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-one a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+.col-two a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-two a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+.col-three a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-three a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+
+
+#fmenu {
+	
+	font-family: Arial, cursive;
+	font-size: 12px;
+}
+</style>
+	</head>
+<body>
+	<div class="header">
+		<h1>MY FAVOURITE RECIPES</h1>
+	</div>
+	
+	<nav>
+	<ul >
+		<li> <a href = "index.html">Home </a> </li>
+		<li> <a href = "index.html">Breakfast</a> </li>
+		<li> <a href = "index.html">Lunch </a> </li>	
+		<li> <a href = "index.html">Dinner </a> </li>
+		<li> <a href = "index.html">Desserts </a> </li>
+	</ul>
+	</nav>
+	
+	<div class="main-content">
+		<div class="col-left">
+			<h2>Welcome</h2>
+			<p>I love cooking and I enjoy trying new recipes. My family and friends love my food. This website is dedicated to home cooks who share the same passion that I have.</p>
+			<p>The recipes in my web page are my favourites: breakfast, lunch and dinner. The recipes are easy. Try them> I hope you will enjoy it as much as I do. Have fun!</p>
+
+			<h3>Featured Video</h3>
+			
+			<iframe class="xframe" frameborder="0" width="580" height="370" src="http://www.dailymotion.com/embed/video/xafpxx" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/xafpxx_how-to-grill-lobster-lobster-grilli_school" target="_blank">How to Grill Lobster &amp; Lobster Grilling Tips</a> <i>by <a href="http://www.dailymotion.com/cleanlinesurf1" target="_blank">cleanlinesurf1</a></i>
+	
+
+			<h3>My Top Favourites</h3>
+		
+		
+		<div class="col-one">	
+			<h4>Lasagna</h4>
+			<img src="data:image/jpeg;base64,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" alt="Lasagna" /> 
+			<p>Ricotta, assorted meats, mozzarella cheese, tomato sauce and tender pasta baked in the oven. 
+			<a href="http://allrecipes.com/Recipe/Worlds-Best-Lasagna/Detail.aspx?event8=1&prop24=SR_Thumb&e11=lasagna&e8=Quick%20Search&event10=1&e7=Recipe%20Hub" target="_blank">World's Best Lasagna</a>
+			</p>
+
+		</div>
+		
+		<div class="col-two">
+			<h4>Seafood Soup</h4>
+			<img src="http://www.dal3bnat.com/wp-content/uploads/2013/12/seafood-soup-with-tomatoes.jpg" alt="Seafood Soup" /> 
+			<p>The ultimate seafood soup with fish (halibut, snapper, bass and/or grouper), shellfish, shrimp and lobster. 
+			<a href="http://www.foodnetwork.com/recipes/tyler-florence/the-ultimate-sea-food-soup-recipe.html" target="_blank">Ultimate Seafood Soup</a>
+			</p>
+		</div>
+
+		<div class="col-three">		
+			<h4>Chicken Souvlaki</h4>
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDxdqI9icAMT79PAWLQl1ItlS5LVraikZjLKxremFgxOdpznjSpg" alt="Chicken Souvlaki" /> 
+			<p>This recipe features the fresh-tasting combination of lemon juice, garlic, and olive oil that is so prevalent in Greek cuisine.
+			<a href="http://allrecipes.com/Recipe/Chicken-Souvlaki-with-Tzatziki-Sauce/Detail.aspx?event8=1&prop24=SR_Thumb&e11=chicken%20souvlaki&e8=Quick%20Search&event10=1&e7=Recipe%20Hub" target="_blank">Chicken Souvlaki</a>
+			</p>		
+		</div>
+	
+		</div>
+	
+		<div class="col-right">
+
+			<div class="col-right1">
+			<h5>Contact Information:</h5>
+			<p>Alma Grace
+			almatarectecan@gmail.com
+			416-999-9999</p>
+			</div>
+			
+			<div class="col-right2">
+			<h5>Special thanks to the following websites where the recipes and images are gotten.</h5>
+				<p>
+				<a href="http://allrecipes.com/" target="_blank">http://allrecipes.com/</a>
+				<a href="http://dailymotion.com/" target="_blank">http://dailymotion.com/</a>
+				<a href="http://www.lcbo.com/" target="_blank">http://www.lcbo.com/</a>
+				<a href="http://www.epicurious.com/" target="_blank">http://www.epicurious.com/</a>
+				<a href="http://www.simpledish.com/" target="_blank">http://www.simpledish.com/</a>
+				<a href="http://www.food.com/" target="_blank">http://www.food.com/</a>
+
+				</p>
+			</div>
+
+		
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+@import url(http://fonts.googleapis.com/css?family=Nosifer);
+@import url(http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
+
+body{
+	background-color: #D3D3D3;
+	background: url("http://www.download3dhouse.com/wp-content/uploads/2013/04/Brown-wood-grain-wallpaper-download.jpg");
+	margin: auto;
+	width: 1000px;
+	font-family:"Arial",Georgia,Serif;
+
+}
+
+p{
+	line-height: 20px;
+
+}
+
+.header{
+
+	margin: 20px 0 20px 0;
+	background-color: #ffffff;
+	height: 150px;
+	width: 965px;
+	padding: 1px ;
+	padding-left: 0px;
+	color: #000000;
+	opacity: 0.9;
+	text-shadow:0px 0px 2px #FFFFFF, 2px 2px 2px #333333;
+	box-shadow: 5px 5px 5px #330000;
+	overflow: hidden;
+}
+
+
+h1{
+	font-family: Arial, cursive;
+	font-size: 3em;
+	color: #000;
+	margin-top: 25px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+
+h3{
+	font-family: Arial, cursive;
+	font-size: 1.5em;
+	color: #000;
+}
+h2{
+	color: #000088;
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+h4{
+	color: #000000;
+	font-size: 16px;
+
+}
+
+h5{
+	font-family: Arial, cursive;
+	font-size: 16 px;
+	color: #000;
+}
+
+
+nav {
+	text-align: center;
+	font-size: 16px;
+	padding: 5px;
+	padding-bottom: 10px;
+	width: 955px;
+	//background-color: #996633;
+	background-color: #660000;
+}
+nav ul{
+	margin: 5px; 
+	list-style: none;
+
+}
+nav ul li{
+	display: inline-block;
+	text-decoration: none;
+	margin-left:0px;
+    margin-right:5px;
+    padding:15px;
+	padding-left:25px;
+	padding-right:25px;
+	box-shadow: 5px 5px 5px #cc3300;
+	text-shadow:0px 0px 2px #FFFFFF, 2px 2px 2px #333333;
+	transition:all 0.2s;
+}
+	
+
+nav ul a{
+	color: #ffffff;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-decoration: none;
+	//box-shadow: 1px 1px 5px #ff00ff;
+	transition:all 0.2s;
+	
+}
+nav ul li:hover{
+
+	
+	transform: rotate(-10deg) scale(1.2);
+	box-shadow: 1px 1px 1px #993300;
+	transition:all 0.1s;
+	
+}
+nav ul li:hover a{
+
+	color: #ff0000;
+	border-color: #ff0000;
+	background-color: #ffffff;
+	border-bottom-style: solid;
+	transition: all 0.4s;
+
+}
+
+nav ul li a:focus{
+
+	border-color:#0066ff;
+	background-color: #ffffff;
+	color: #0066ff;
+	border-bottom-style: solid;
+	transition: all 0.1s;
+
+
+}
+
+nav ul li a:active{
+
+	border-color:#0066ff;
+	background-color: #ffffff;
+	color: #0066ff;
+	border-bottom-style: solid;
+	transition: all 0.1s;
+
+
+}
+
+.col-one a:link{
+	color: #000;
+	text-decoration: underline;
+	font-size: 16px;
+
+}
+
+
+
+.col-left  img:hover{
+	position: relative;
+	top: -30px;
+	left: 80px;
+	transform: scale(1.5);
+	transition: all 1s;
+
+}
+
+
+
+.main-content{
+	padding: 0px;
+	overflow:hidden;
+	position: relative;
+	top: 5px;
+
+}
+
+.col-left{
+	padding: 10px 20px 10px 20px;
+	background-color: #ffffff;
+	width:665px;
+	float:left;
+	box-shadow: 1px 1px 5px #330000;
+}
+.col-right2 { 
+	padding: 0px 20px 20px 20px;
+	background-color: #ffffff;
+	width:200px;
+	margin-left: 20px;
+	float:left;
+	background-image: url("back16.jpg");
+    background-size: 100% 100%;
+	color: #000000;
+	opacity: 0.8;
+	box-shadow: 1px 1px 5px #330000;
+	
+}
+
+.col-right1 { 
+	position: fixed;
+	padding: 0px 20px 15px 20px;
+	background-color: #ffffff;
+	width:200px;
+	margin-left: 725px;
+	margin-top: -250px;
+	margin-bottom: 0px;
+	float:left;
+	background-image: url("white.jpg");
+    background-size: 100% 100%;
+	color: #000000;
+	opacity: 0.8;
+	box-shadow: 1px 1px 5px #330000;
+
+	
+}
+.col-right2 a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+.col-right2 a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-right p{ 
+	font-size: 14px;
+}
+
+.col-left img{
+	width:190px;
+	height: 142px;
+	margin-top; 15px;
+		margin-bottom; 15px;
+	box-shadow: 1px 1px 5px #330000;
+	border-radius: 5px 5px 5px 5px;
+	transition: all 1s;
+	
+}
+
+.col-right2 img{
+	width:255px;
+
+
+}
+.col-right1 img{
+	width:75px;
+	height: 130px;
+}
+
+
+.col-one{
+	padding: 5px 10px 5px 10px;
+	background-color: #fff;
+	width:200px;
+	float:left;
+
+	margin-top: 5px;
+
+}
+
+.col-two{
+	padding: 5px 10px 5px 10px;
+	background-color: #fff;
+	width:200px;
+	float:left;
+
+	margin-top: 5px;
+
+}
+
+.col-three{
+	padding: 5px 10px 5px 10px;
+	background-color: #fff;
+	width:200px;
+	float:left;
+
+	margin-top: 5px;
+
+}
+
+.col-one a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-one a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+.col-two a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-two a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+.col-three a:hover{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #ff0000; 
+	color: #ffffff;
+
+}
+
+.col-three a:focus{
+	color: #ffffff;
+	background-color: #0066ff; 
+	border-color:#0066ff;
+	transition: all 0.1s;
+}
+
+
+#fmenu {
+	
+	font-family: Arial, cursive;
+	font-size: 12px;
+}
+
+

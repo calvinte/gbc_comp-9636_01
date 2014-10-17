@@ -1,7 +1,7 @@
 angular.module('instagramApp', [])
 	.controller('InstaController', ['$scope', function($scope) {
 		$scope.photos = ['test', 'testing again'];
-		$scope.tag = 'bodega';
+		$scope.tag = 'thanksgiving';
 		$scope.getPhotos = function() {
 			$.ajax({
 				type: 'GET',

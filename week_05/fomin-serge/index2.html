@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css'>
+		<link rel='stylesheet' href='style2.css'>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/button.min.js'></script>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+		<script src="script2.js"></script>
+	</head>
+	<body>
+		<div class='container' ng-app='instagramApp'>
+			<div ng-controller='InstaController'>
+				<h1 class='page-header'>#{{tag}} photos</h1>
+				<form class="form-inline col-md-12">
+					<input type='text' ng-model="tag" class="form-control">
+					<input type="submit" ng-click="getPhotos()" class="btn btn-primary">
+				</form>
+				<ul class='container'>
+					<li ng-repeat='photo in photos' class='photo col-md-2'>
+						<img src='{{photo.images.standard_resolution.url}}'>
+						<p>{{photo.caption.text}}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+

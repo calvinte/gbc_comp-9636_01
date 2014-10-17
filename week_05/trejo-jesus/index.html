@@ -18,7 +18,8 @@
 				<ul class="container">
 					<li ng-repeat="photo in photos" class="photo col-md-2">
 						<img src="{{photo.images.standard_resolution.url}}">
-						<p>{{photo.caption.text}}</p>
+						<p>{{photo.likes.count}} likes</p>
+						<p>{{photo.user.username}}</p>
 					</li>
 
 				</ul>

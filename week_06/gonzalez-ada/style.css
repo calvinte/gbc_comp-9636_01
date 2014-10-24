@@ -1,0 +1,39 @@
+body{
+
+	background-color: 	#F5FAFF;
+	color:#428bca;
+}
+
+li.photo{
+	list-style:none;
+	height: 250px;
+}
+
+.photo img {
+	max-width: 100%;
+}
+
+.photo p{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.map-container {
+		position: fixed;
+		top: 140px;
+		left: 50%;
+		width: 635px;
+}
+
+#googlemap {
+		height:500px;
+}
+
+button {
+overflow: visible;
+background-color:#428bca;
+color:#ffffff;
+border-radius: 5px;
+border-style: none;
+}

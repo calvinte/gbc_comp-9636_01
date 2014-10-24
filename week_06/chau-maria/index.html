@@ -10,12 +10,12 @@
 	</head>
 	<body>
 
-		<div ng-app="instagramApp">			
+		<div class="containter" ng-app="instagramApp">			
 			<div ng-controller="InstaController">
 				<h1 class="page-header">#{{tag}} Photos</h1>	
 
 				<form class="form-inline col-md-12">
-					
+
 					<input type="text" ng-model="tag" class="form-control">
 					<input type="submit" ng-click="getPhotos()" class="btn btn-primary">
 				</form>
@@ -25,9 +25,10 @@
 						<p>{{photo.caption.text}}</p>
 					</li>
 				</ul>
-				<button ng-click="getPhotos()">Get next page</button>
+				<button ng-click="getPhotos()" class="btn btn-primary">Get next page</button>
 			</div>
 		</div>	
+		
 		<div class="container" id="googlemap"></div>
 	</body>
 </html>

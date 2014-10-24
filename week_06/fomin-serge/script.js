@@ -34,3 +34,4 @@ angular.module('instagramApp', [])
 	$(document).ready(function() {
 		$('.swipebox' ).swipebox();
 	});
+	

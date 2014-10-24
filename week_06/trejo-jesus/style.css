@@ -1,0 +1,75 @@
+@font-face {
+	font-family: Bebas Neue;
+	src: url(fonts/BebasNeue.otf);
+}
+
+h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	text-align: center;
+	color: #000;
+	font-size: 3.5em;
+}
+
+body{
+	background-color: #CFD0D1
+}
+
+form{
+
+	display:inline-block;
+}
+
+p{
+	line-height: 10px;
+}
+
+li{
+	list-style: none;
+	font-size: 50px;
+}
+
+li.urls{
+	list-style: none;
+	font-size: 1em;
+	color:#000;
+}
+
+li.photo{
+	list-style: none;
+	margin: 3px;
+}
+
+.photo img {
+	max-width: 100%;
+	border-width: 2px;
+	border-style:solid;
+	height:200px;
+	border-color: #fff;
+
+}
+
+.photo p{
+	font-size: .8em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	/*color: #CFD0D1;*/
+}
+
+.photo img .hover
+{
+	border-style:dotted;
+	border-color: #FF6600;
+;
+
+}
+.elements{
+	margin-top: 15px;
+	border-top: dotted #fff;
+    border-bottom: dotted #fff;
+    border-width:thin
+}
+
+.venueLinks{
+	color:#000;
+}

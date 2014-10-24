@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src='script.js'></script>		
+	</head>	
+	<body>
+		<div class="container" ng-app="FourSqApp">			
+			<div ng-controller="FourSqController">
+				<h1 class="page-header"> Places and Pics</h1>
+				<form>
+				<input type="text" ng-model="tag">
+				<input type="submit" ng-click="getVenues()" class="btn btn-primary">
+				</form>
+				<div class="elements">
+				 <ul class="container">
+					<li ng-repeat="venue in venues" class="urls photo col-md-2">
+						<!--<img src="{{}}">-->
+						<a ng-click= "getPhotos(venue.id)" class= "venueLinks">{{venue.name}}</a>
+						
+					</li>
+
+				</ul>
+				 <ul class="container">
+					<li ng-repeat="photo in photos" class="photo col-md-2">
+						<!--<img src="{{}}">-->
+						<a href= "{{photo.prefix}}300x500{{photo.suffix}}"><img src="{{photo.prefix}}300x500{{photo.suffix}}"></a>
+						
+					</li>
+					<li ng-show="!photos.length">:(</li>
+				</ul>
+			</div>
+			</div>
+		</div>		
+	</body>
+</html>
+

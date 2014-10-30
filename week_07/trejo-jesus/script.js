@@ -10,12 +10,13 @@ angular.module("FourSqApp", [])
 
 		$scope.venues = [];
 		$scope.tag = 'Beer';
+		$scope.city = 'Toronto';
 		$scope.initiated = false;
 		$scope.getVenues = function(){
 			$.ajax({
 				type:'GET',
 				dataType:'jsonp',
-				url:'https://api.foursquare.com/v2/venues/search?client_id='+ foursquareClientId + '&client_secret='+ foursquareClientSecret + '&v=20130815&ll=40.7,-74&query='+$scope.tag,
+				url:'https://api.foursquare.com/v2/venues/search?client_id='+ foursquareClientId + '&client_secret='+ foursquareClientSecret + '&v=20130815&near=' + $scope.city + '&query='+$scope.tag,
 
 				success: function(response){
 					console.log(response);

@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+
 li.photo {
 	list-style: none;
 }
@@ -20,39 +24,38 @@ li.photo {
 
 .header{
 
-		margin: auto;
-		text-align: center;
-		background-color: #ffffff;
-		height: 150px;
-		width: 965px;
-		padding: 1px ;
-		padding-left: 0px;
-		color: #000000;
-		opacity: 0.9;
-		text-shadow:0px 0px 2px #FFFFFF, 2px 2px 2px #333333;
-		box-shadow: 5px 5px 5px #330000;
-		overflow: hidden;
-	}
+	background-color: #000;
+	padding: 50px ;
+}
+
+
 	
 body{
 
 	background: url('white.jpg') repeat;
 	margin: auto;
 	font-family:"Arial",Georgia,Serif;
-	text-align: left;
-
+	text-align: center;
+	margin-bottom: 0px;
 	}
-	
-	
+
 h1{
-	top: 15 px;
-	font-family: Arial, cursive;
+   font-family: 'Droid Serif', Georgia, Times, serif;
+	color: #fff;
 	font-size: 3em;
-	color: #000;
-	text-align: left;
-	background-color: #99ccff;
-	box-shadow: 2px 2px 5px #330000;
-	opacity: .9;
+	margin: 0;
+}
+
+	
+	
+h2{
+   font-family: 'Droid Serif', Georgia, Times, serif;
+	
+	font-size: 3em;
+	height: 80px;
+	color: #6699ff;
+	text-align: center;
+
 }	
 
 	
@@ -68,7 +71,7 @@ h1{
 	display:inline-block;
 	padding: 15px;
 	margin: 10px;
-
+	overflow: hidden;
 	box-shadow: 2px 2px 5px #330000;
 	transition: all 1s;
 			
@@ -86,3 +89,11 @@ h1{
 	transition: all 1s;
 			}		
 	
+	.footer {
+	background-color: #000000;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	color: #fff;
+	height: 100px;
+}

@@ -38,3 +38,36 @@ angular.module("FourSqApp", [])
 		$scope.getVenues();
 	
 	}]);
+
+$(document).ready(function() {
+	var map = new google.maps.Map($('#googlemap') [0], {
+		zoom:16,
+	});
+	$("body").on("click", "photo", function (){
+		var data=$(this).data();
+		if (data.lat && data.long){
+								
+
+
+			$("#googlemap").show();
+			console.log("test");
+			console.log($(this).data());
+			var latlng = new google.maps.LatLng (
+				data.lat,
+				data.long
+			);
+								var image = new google.maps.MarkerImage("https://s3.amazonaws.com/assets.getcoveredamerica.org/wp-content/uploads/icon_locator.gif", null, null, null, new google.maps.Size(34, 34));
+								var marker = new google.maps.Marker({
+									position: latlng,
+									map: map,
+									icon:image, 
+								});
+
+
+			map.setCenter(latlng);
+		} else {
+			$("#googlemap").hide();
+		}
+	})
+});
+

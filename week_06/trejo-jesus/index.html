@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
 		<script src='script.js'></script>		
 	</head>	
 	<body>
@@ -13,28 +14,34 @@
 				<h1 class="page-header"> Places and Pics</h1>
 				<form>
 				<input type="text" ng-model="tag">
-				<input type="submit" ng-click="getVenues()" class="btn btn-primary">
+				<input type="submit" ng-click="getVenues()" class="button">
 				</form>
 				<div class="elements">
+					<ul>
+						<li></li>
+					</ul>
 				 <ul class="container">
 					<li ng-repeat="venue in venues" class="urls photo col-md-2">
-						<!--<img src="{{}}">-->
+						
 						<a ng-click= "getPhotos(venue.id)" class= "venueLinks">{{venue.name}}</a>
 						
 					</li>
 
 				</ul>
 				 <ul class="container">
-					<li ng-repeat="photo in photos" class="photo col-md-2">
-						<!--<img src="{{}}">-->
-						<a href= "{{photo.prefix}}300x500{{photo.suffix}}"><img src="{{photo.prefix}}300x500{{photo.suffix}}"></a>
+					<li ng-repeat="photo in photos" class="photo col-md-2" data-lat="{{venues.location.lat}}" data-long="{{venues.location.lng}}">
+						
+						<a ng-click= "function()" href= "{{photo.prefix}}300x500{{photo.suffix}}"><img src="{{photo.prefix}}300x500{{photo.suffix}}"></a>
 						
 					</li>
 					<li ng-show="!photos.length">:(</li>
 				</ul>
 			</div>
 			</div>
-		</div>		
+		</div>
+		</div>	
+		<div class="map"><div id="googlemap"></div></div>
+</div>		
 	</body>
 </html>
 

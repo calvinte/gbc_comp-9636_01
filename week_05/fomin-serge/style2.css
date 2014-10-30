@@ -1,0 +1,13 @@
+li.photo {
+list-style: none;
+}
+
+.photo img {
+	max-width: 100%;
+}
+
+.photo p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

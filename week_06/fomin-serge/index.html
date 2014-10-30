@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<title>Best Puccini's operas</title>
+		<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css'>
+		<link rel='stylesheet' href='style.css'>
+		<link rel="stylesheet" href="src/css/swipebox.css">
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+		<script src="src/js/jquery.swipebox.js"></script>
+		<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.2.9/jquery.swipebox.min.js"></script>-->
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/button.min.js'></script>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		
+		<div class='main-nav'>
+				<nav class="main.nav">
+					<ul>
+						<a href="#"><li>manon lescaut</li></a>
+						<a href="#"><li>la boheme</li></a>
+						<a href="#"><li>tosca</li></a>
+						<a href="#"><li>madama butterfly</li></a>
+						<a href="#"><li>turandot</li></a>
+					</ul>
+				</nav>
+		</div>
+			
+		<div class='second'>
+			<h2 class='top'>type an opera title below to see the trending instagram photos</h2>
+		</div>
+	
+		<div class='container' ng-app='instagramApp'>
+			<div ng-controller='InstaController'>
+				<h1 class='page-header'>#{{tag}} photos</h1>
+				<form class="form-inline col-md-12">
+					<input type='text' ng-model="tag" class="form-control">
+					<input type="submit" ng-click="setTag()" class="btn btn-primary">
+				</form>
+				<ul class='container'>
+					<li rel="photos" ng-repeat='photo in photos' class='photo col-md-2'>
+						<a href='{{photo.images.standard_resolution.url}}' class="swipebox" title="{{photo.caption.text}}">
+							<img src='{{photo.images.standard_resolution.url}}'>
+						</a>
+						<p>{{photo.caption.text}}</p>
+					</li>
+				</ul>
+				<button ng-click="getPhotos()">Get more photos</button>
+				</div>
+		</div>
+	</body>
+</html>
+

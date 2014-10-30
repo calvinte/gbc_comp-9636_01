@@ -1,0 +1,60 @@
+body {
+	background-color: #008B8B;
+	font-family: 'Lato', sans-serif;
+}
+
+li.photo {
+	list-style: none;
+}
+
+.photo img {
+	max-width: 100%;
+}
+
+.photo img:hover {
+	box-shadow: 3px 3px 1px #090909;
+	cursor: pointer;
+}
+
+.photo p {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	padding-top: 5px;
+}
+
+
+#googlemap {
+		height:350px;
+		width:1000px;
+		border: 1px solid #090909;
+		box-shadow: 3px 3px 1px #090909;
+}
+
+.ng-scope {
+	padding-top: 30px;
+	
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+
+}
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	color: #DAA520;
+}
+
+input, button {
+	cursor: pointer;
+}
+
+
+h2 {
+	text-align: center;
+	color: #DAA520;
+}

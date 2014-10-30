@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+
+li.photo {
+	list-style: none;
+}
+
+.photo img {
+	max-width: 100%;
+}
+
+.photo p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+.captiontext {
+	color: #0000ff;
+}
+
+
+.header{
+
+	background-color: #000;
+	padding: 50px ;
+}
+
+
+	
+body{
+
+	background: url('white.jpg') repeat;
+	margin: auto;
+	font-family:"Arial",Georgia,Serif;
+	text-align: center;
+	margin-bottom: 0px;
+	}
+
+h1{
+   font-family: 'Droid Serif', Georgia, Times, serif;
+	color: #fff;
+	font-size: 3em;
+	margin: 0;
+}
+
+	
+	
+h2{
+   font-family: 'Droid Serif', Georgia, Times, serif;
+	
+	font-size: 3em;
+	height: 80px;
+	color: #6699ff;
+	text-align: center;
+
+}	
+
+	
+.photo {
+	padding: 15px;
+//	position: relative;
+	top: 5px;
+
+	}
+
+.photo img{
+
+	display:inline-block;
+	padding: 15px;
+	margin: 10px;
+	overflow: hidden;
+	box-shadow: 2px 2px 5px #330000;
+	transition: all 1s;
+			
+		}
+
+		
+.photo  img:hover{
+	position: relative;
+	top: -30px;
+	left: -50px;
+	box-shadow: 2px 2px 5px #99ccff;
+
+	border-radius: 5px 5px 5px 5px;
+	transform: scale(2);
+	transition: all 1s;
+			}		
+	
+	.footer {
+	background-color: #000000;
+	text-align: center;
+	padding: 30px;
+	margin-top: 50px;
+	color: #fff;
+	height: 100px;
+}

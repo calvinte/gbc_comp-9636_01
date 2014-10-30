@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="script.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+	</head>
+	<body>
+<div class="container">
+		<div class="col-md-6"  ng-app="instagramApp">
+			<div ng-controller="InstaController">
+				<h1 class="page-header">#{{tag}} Photos</h1>
+
+				<form class="form-inline">
+
+				<input type="text" ng-model="tag" class="form-control">
+				<input type="submit" ng-click="setTag()" class="btn btn-primary">
+					
+				<ul>
+					<li ng-repeat="photo in photos" class="photo col-md-6" data-lat="{{photo.location.latitude}}" data-long="{{photo.location.longitude}}">
+						<img src="{{photo.images.standard_resolution.url}}" class="img-circle">
+						<p>{{photo.caption.text}}</p>
+					</li>
+				</ul>
+				<button ng-click="getPhotos()">Get next page</button>
+			</div>
+		</div>	
+		<div class="col-md-6 map-container"><div id="googlemap"></div></div>
+</div>
+	</body>
+</html>

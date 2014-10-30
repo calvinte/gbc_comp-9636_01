@@ -1,0 +1,23 @@
+body{
+	background-color: #CFD0D1
+}
+
+li.photo{
+	list-style: none;
+}
+
+.photo img {
+	max-width: 100%;
+	border-width: 2px;
+	border-style:solid;
+	border-color: #fff;
+
+}
+
+.photo p{
+	font-size: .8em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	/*color: #CFD0D1;*/
+}

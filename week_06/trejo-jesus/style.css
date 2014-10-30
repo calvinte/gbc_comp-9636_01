@@ -1,0 +1,145 @@
+
+@font-face {
+	font-family: Archistico;
+	src: url(fonts/Archistico_Simple.ttf);
+}
+
+@font-face {
+	font-family: idolwild;
+	src: url(fonts/idolwild.ttf);
+}
+h1 {
+	font-family: 'Archistico', sans-serif;
+	text-align: center;
+	color: #000;
+	font-size: 8em;
+}
+
+body{
+	font-size: 1.5em;
+	font-family: idolwild;
+	/*background-color: #CFD0D1;*/
+	background-image:url('noisy-texture-100x100-o26-d63-c-b8b2b4-t0.png');
+
+}
+input[type=text] {
+	font-family: 'Archistico', sans-serif;
+    border: 1px dotted white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+    height: 40px;
+    width: 180px;
+}
+
+
+form{
+
+	display:inline-block;
+}
+
+p{
+	line-height: 10px;
+}
+
+li{	
+	margin-top: 5px;
+	list-style: none;
+	font-size: 50px;
+}
+
+li.urls{
+	margin-top: 5px;
+	list-style: none;
+	font-size: 1em;
+	color:#6B6B6B;
+	text-overflow: ellipsis;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+li.photo{
+	list-style: none;
+	margin: 3px;
+}
+
+.photo img {
+	max-width: 100%;
+	border-width: 2px;
+	border-style:solid;
+	height:200px;
+	border-color: #fff;
+
+}
+
+.photo p{
+	font-size: .8em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	/*color: #CFD0D1;*/
+}
+
+.photo img:hover
+{
+	border-style:solid;
+	border-color: #333;
+}
+.elements{
+	margin-top: 10px;
+	border-top: dotted #fff;
+    border-bottom: dotted #fff;
+    border-width:thin
+}
+
+.venueLinks{
+	color:#000;
+}
+
+.map-container {
+		position: fixed;
+		top: 140px;
+		left: 50%;
+		width: 635px;
+}
+
+#googlemap {
+		height:500px;
+}
+
+.page-header{
+border-bottom: dotted #666;
+
+}
+
+.button{
+font-family: 'Archistico', sans-serif;
+	height:30px;
+	width: 70px;
+	background-color: #333;
+	color:#fff;
+	border: 0px;
+	margin-left: 10px;
+
+}
+.button:hover{
+font-family: 'Archistico', sans-serif;
+	height:30px;
+	width: 70px;
+	background-color: #ccc;
+	color:#000;
+	border: 0px;
+	margin-left: 10px;
+	}

@@ -18,7 +18,7 @@
 
 				<input type="text" ng-model="tag" class="form-control">
 				<input type="submit" ng-click="setTag()" class="btn btn-primary">
-
+					
 				<ul>
 					<li ng-repeat="photo in photos" class="photo col-md-6" data-lat="{{photo.location.latitude}}" data-long="{{photo.location.longitude}}">
 						<img src="{{photo.images.standard_resolution.url}}" class="img-circle">

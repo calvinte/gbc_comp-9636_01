@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	
+		<body>
+		<div class="header">
+			<h1>INSTAGRAM IMAGE GALLERY </h1>
+		</div>
+		<div class="container" ng-app="instagramApp">
+			<div ng-controller="InstaController">
+				<h1></h1>
+				<h2 class="page-header">#{{tag}} Photos</h2>
+				<form class="form-inline col-md-12">
+					<input type="text" ng-model="tag" class="form-control">
+					<input type="submit" ng-click="setTag()" class="btn btn-primary">
+				</form>
+				<ul class="container">
+					<li ng-repeat="photo in photos" class="photo col-md-2">
+
+						<a href="photo.html?photoid={{photo.id}}" target="_blank"><img ng-src="{{photo.images.standard_resolution.url}}" /></a>
+						<p>{{photo.caption.text}}</p>
+					</li>
+				</ul>
+				<button ng-style="{'font-weight': 'bold','font-size': '16px', 'background-color': '#99ccff'}" ng-click="getPhotos()">Get next page</button>
+			</div>
+		</div>
+		
+	<div class="footer">
+		
+	<p>Copyright &copy; 2014 Alma Grace
+	</br>
+	Comp 9636 - Building Javascript Applications
+	</p>
+	</div>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

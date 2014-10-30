@@ -1,0 +1,23 @@
+body{
+	color: grey;
+}
+
+li.photo{
+list-style: none;
+}
+
+.photo img{
+max-width: 100%;
+border-radius: 50%;
+}
+
+.photo p{
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+h1{
+text-align: center;
+text-decoration: underline;
+}

@@ -39,7 +39,6 @@ body{
 	background: url('white.jpg') repeat;
 	margin: auto;
 	font-family:"Arial",Georgia,Serif;
-	//display:inline-block;
 	text-align: left;
 
 	}
@@ -50,9 +49,6 @@ h1{
 	font-family: Arial, cursive;
 	font-size: 3em;
 	color: #000;
-//	margin-top: 25px;
-//	margin-left: 10px;
-//	margin-bottom: 0px;
 	text-align: left;
 	background-color: #99ccff;
 	box-shadow: 2px 2px 5px #330000;
@@ -62,8 +58,7 @@ h1{
 	
 .photo {
 	padding: 15px;
-	//overflow:hidden;
-	position: relative;
+//	position: relative;
 	top: 5px;
 
 	}
@@ -75,7 +70,6 @@ h1{
 	margin: 10px;
 
 	box-shadow: 2px 2px 5px #330000;
-	//border-radius: 50%;
 	transition: all 1s;
 			
 		}
@@ -85,8 +79,8 @@ h1{
 	position: relative;
 	top: -30px;
 	left: -50px;
+	box-shadow: 2px 2px 5px #99ccff;
 
-	box-shadow: #99ccff;
 	border-radius: 5px 5px 5px 5px;
 	transform: scale(2);
 	transition: all 1s;

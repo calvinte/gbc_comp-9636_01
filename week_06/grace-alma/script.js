@@ -1,17 +1,19 @@
 angular.module('instagramApp', [])
 	.controller('InstaController', ['$scope', function($scope) {
+		$scope.tag = 'flower';
 		var nexturl = 'https://api.instagram.com/v1/tags/' + $scope.tag + '/media/recent?client_id=585d00be2af34a26b0e1caa6995cf19f';
 		var loading = false;			
 		$scope.photos = [];
-		$scope.tag = 'thanksgiving';
+
 		$scope.setTag = function() {			
 			$scope.photos = [];
 			nexturl = 'https://api.instagram.com/v1/tags/' + $scope.tag + '/media/recent?client_id=585d00be2af34a26b0e1caa6995cf19f';
 			$scope.getPhotos();
 		}
+		
 		$scope.getPhotos = function() {
 			if (loading) return;
-			loading = true;
+			//loading = true;
 			$.ajax({
 				 type: 'GET',
 				 dataType: 'jsonp',
@@ -26,7 +28,9 @@ angular.module('instagramApp', [])
 				 }
 			});
 		};
+		
 		$scope.getPhotos();
+		loading = true;
 	}]);
 
 
